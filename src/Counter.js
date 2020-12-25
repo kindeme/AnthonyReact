@@ -1,14 +1,15 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 
 const Counter = () => {
 
-    const [count,setCount] = useState(0);
+    const [count, setCount] = useState(0);
+    
+    useEffect(() => { },[]);
     return (
         <React.Fragment>
-            <p> The count is : {count}</p>
-            <button  onClick= {() => setCount(count + 1) }> Increment</button>
-            <button onClick={() => setCount(count + 1)}> Decrement</button>
-            <button onClick={() => setCount(count * 5) }> Multiply</button>
+            <h6>Counter</h6>
+            <p> current count: {count}</p>
+            <button onClick={() => setCount(count  + 1) }> Increment the counter</button>
         </React.Fragment>
     );
 
