@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 import { Router, Switch, Route } from "react-router-dom";
+import About from "./About";
+import Home from "./Home";
+import Contact from "./Contact";
 
 function App() {
   //   const employeeInfo = [
@@ -48,6 +51,17 @@ function App() {
       <button> About Us </button>
       <button> Contact Us </button>
       <button> Home Page </button>
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 }
